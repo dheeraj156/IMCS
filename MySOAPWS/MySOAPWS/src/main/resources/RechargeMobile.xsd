@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.imcs.trng/RechargeMobile" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.imcs.trng/RechargeMobile">
+
+    <complexType name="RechargeMobileRequest">
+    	<sequence>
+    		<element name="consumerId" type="string" minOccurs="1"></element>
+    		<element name="mobileNumber" type="long" minOccurs="1"></element>
+    		<element name="amount" type="decimal" minOccurs="1"></element>
+    		<element name="plan" type="string"></element>
+    	</sequence>
+    </complexType>
+    
+    <complexType name="RechargeMobileResponse">
+    	<sequence>
+    		<element name="responseCode" type="string"></element>
+    		<element name="responseMessage" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="RechargeMobileRequest" type="tns:RechargeMobileRequest"></element>
+
+
+    <element name="RechargeMobileResponse" type="tns:RechargeMobileResponse"></element>
+</schema>
